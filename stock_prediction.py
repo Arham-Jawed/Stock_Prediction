@@ -6,12 +6,11 @@ from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import tkinter as tk
 from tkinter import filedialog, messagebox
-
 class StockPredictor:
     def __init__(self, root):
         self.root = root
         self.root.title("Stock Prediction") 
-        
+    
         self.file_frame = tk.Frame(self.root)
         self.file_frame.pack(padx=10, pady=10)
 
@@ -77,5 +76,7 @@ class StockPredictor:
 
 if __name__ == "__main__":
     root = tk.Tk()
+    root.geometry("1900x1080")
+    root.configure(background="#373A40")
     app = StockPredictor(root)
     root.mainloop()
